@@ -9,8 +9,8 @@ public class UserDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public void save(){
+    public void save(String email,String name){
         String sql = "insert into user(email,name) values(?,?)";
-        jdbcTemplate.update(sql, "2134@qq.com","dv");
+        jdbcTemplate.update(sql, email,name);
     }
 }
